@@ -1,0 +1,1103 @@
+<robot
+  name="Dreko">
+  <link
+    name="chest">
+    <inertial>
+      <origin
+        xyz="0.0386669273658683 0.0140884820081456 0.290215764272227"
+        rpy="0 0 0" />
+      <mass
+        value="0.740822124104116" />
+      <inertia
+        ixx="0.00152118060694842"
+        ixy="-1.89735380184963E-18"
+        ixz="6.06177382028129E-05"
+        iyy="0.00131882473361287"
+        iyz="2.71050543121376E-20"
+        izz="0.00140522500372438" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/chest.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/chest.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right hip yaw">
+    <inertial>
+      <origin
+        xyz="-2.00031521237903E-05 0.0126391664016347 -0.0199633931822752"
+        rpy="0 0 0" />
+      <mass
+        value="0.0155182096184455" />
+      <inertia
+        ixx="1.27383758643282E-05"
+        ixy="-8.49150529622436E-20"
+        ixz="6.35274710440725E-22"
+        iyy="2.34004190539271E-06"
+        iyz="-1.51404969675395E-08"
+        izz="1.22052488200629E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right hip yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right hip yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right hip yaw"
+    type="revolute">
+    <origin
+      xyz="0.0499881209354321 -0.024401521143979 0.209414700698158"
+      rpy="-3.14159265358979 8.88178419700125E-16 -1.57079632679488" />
+    <parent
+      link="chest" />
+    <child
+      link="right hip yaw" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right hip roll">
+    <inertial>
+      <origin
+        xyz="0.0122610037315669 -0.00019356743892851 0.012734593446106"
+        rpy="0 0 0" />
+      <mass
+        value="0.0692005181830974" />
+      <inertia
+        ixx="2.36910155439808E-05"
+        ixy="1.46695929999879E-07"
+        ixz="5.78090342943966E-07"
+        iyy="3.0744764821142E-05"
+        iyz="1.57059601561052E-07"
+        izz="1.60316743915191E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right hip roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right hip roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right hip roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="right hip yaw" />
+    <child
+      link="right hip roll" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right hip pitch">
+    <inertial>
+      <origin
+        xyz="0.0644258242691838 0.000448849682669672 0.000371685382277762"
+        rpy="0 0 0" />
+      <mass
+        value="0.0453826022606667" />
+      <inertia
+        ixx="8.44237699200824E-06"
+        ixy="2.5237762848115E-07"
+        ixz="1.49396394383443E-07"
+        iyy="3.54510005946547E-05"
+        iyz="1.22957827408421E-11"
+        izz="3.11468056311057E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right hip pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right hip pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right hip pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5707963267949 5.55111512312578E-17 -2.77555756156289E-17" />
+    <parent
+      link="right hip roll" />
+    <child
+      link="right hip pitch" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right knee pitch">
+    <inertial>
+      <origin
+        xyz="0.0360433821800561 -0.00732939447238448 0.00170776679769151"
+        rpy="0 0 0" />
+      <mass
+        value="0.0310504106720411" />
+      <inertia
+        ixx="1.31112864963239E-05"
+        ixy="4.41749673249426E-06"
+        ixz="-7.30565917006834E-21"
+        iyy="3.61659917028807E-05"
+        iyz="-3.3881317890172E-21"
+        izz="3.05966878294176E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right knee pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right knee pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right knee pitch"
+    type="revolute">
+    <origin
+      xyz="0.0892760886206849 0.00188721596096714 -0.00108776364557142"
+      rpy="1.0769163338864E-14 7.21644966006352E-16 8.88178419700126E-16" />
+    <parent
+      link="right hip pitch" />
+    <child
+      link="right knee pitch" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right ankle pitch">
+    <inertial>
+      <origin
+        xyz="-0.0121336922782945 0.010799355323743 0.00344290774388731"
+        rpy="0 0 0" />
+      <mass
+        value="0.0692005181830974" />
+      <inertia
+        ixx="2.36911816985084E-05"
+        ixy="-5.78090342943989E-07"
+        ixz="1.41842790503463E-07"
+        iyy="1.60318405460471E-05"
+        iyz="-1.42624304286741E-07"
+        izz="3.07447648211417E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right ankle pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right ankle pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right ankle pitch"
+    type="revolute">
+    <origin
+      xyz="0.092025925845232 0.000658022161407784 -0.00216863718455219"
+      rpy="1.99840144432528E-15 -2.77555756156289E-17 -1.0547118733939E-15" />
+    <parent
+      link="right knee pitch" />
+    <child
+      link="right ankle pitch" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right ankle roll">
+    <inertial>
+      <origin
+        xyz="0.0233518455009303 -0.0874644794096805 0.00994466921597839"
+        rpy="0 0 0" />
+      <mass
+        value="0.0309681647536877" />
+      <inertia
+        ixx="3.45937654431816E-05"
+        ixy="-7.3522814365964E-07"
+        ixz="-4.15046144154607E-20"
+        iyy="2.79260402817556E-05"
+        iyz="-1.9312351197398E-19"
+        izz="1.02256743398885E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right ankle roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/right ankle roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right ankle roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.57079632679491 2.77555756156289E-17 -5.55111512312578E-17" />
+    <parent
+      link="right ankle pitch" />
+    <child
+      link="right ankle roll" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left hip yaw">
+    <inertial>
+      <origin
+        xyz="0.000969999999999235 0.0126392590632947 -0.019963311270477"
+        rpy="0 0 0" />
+      <mass
+        value="0.0155182096184456" />
+      <inertia
+        ixx="1.2738375864328E-05"
+        ixy="3.03502492913056E-19"
+        ixz="-5.75982404132924E-20"
+        iyy="2.34004190539272E-06"
+        iyz="-1.51404969675646E-08"
+        izz="1.22052488200627E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left hip yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left hip yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left hip yaw"
+    type="revolute">
+    <origin
+      xyz="0.04998821359709 0.053528482008146 0.209414782609956"
+      rpy="-3.14159265358979 9.43689570931383E-16 -1.5707963267949" />
+    <parent
+      link="chest" />
+    <child
+      link="left hip yaw" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left hip roll">
+    <inertial>
+      <origin
+        xyz="0.0122610856433651 0.00113650376163997 0.0127346861077649"
+        rpy="0 0 0" />
+      <mass
+        value="0.0692005181830974" />
+      <inertia
+        ixx="2.36911816985086E-05"
+        ixy="-1.41842790503468E-07"
+        ixz="5.78090342944068E-07"
+        iyy="3.07447648211419E-05"
+        iyz="-1.42624304286701E-07"
+        izz="1.6031840546047E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left hip roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left hip roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left hip roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="left hip yaw" />
+    <child
+      link="left hip roll" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left hip pitch">
+    <inertial>
+      <origin
+        xyz="0.0644259061809818 1.80411241501588E-15 0.00132168223016009"
+        rpy="0 0 0" />
+      <mass
+        value="0.0453826022606668" />
+      <inertia
+        ixx="8.43909557565386E-06"
+        ixy="1.84441424264624E-19"
+        ixz="1.4939639438398E-07"
+        iyy="3.54510005946551E-05"
+        iyz="-4.31986803099693E-20"
+        izz="3.11435242147515E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left hip pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left hip pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left hip pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5707963267949 1.11022302462516E-16 0" />
+    <parent
+      link="left hip roll" />
+    <child
+      link="left hip pitch" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left knee pitch">
+    <inertial>
+      <origin
+        xyz="0.0409401274845462 -0.0181769433245862 -0.00442602569160809"
+        rpy="0 0 0" />
+      <mass
+        value="0.0310504106720411" />
+      <inertia
+        ixx="1.31112864963239E-05"
+        ixy="-4.35795828735624E-06"
+        ixz="2.78655107901321E-07"
+        iyy="3.59981299978743E-05"
+        iyz="6.26804380968182E-20"
+        izz="3.04288261244113E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left knee pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left knee pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left knee pitch"
+    type="revolute">
+    <origin
+      xyz="0.0839007969125189 0.0242290291743455 0.00599602569161375"
+      rpy="-1.22124532708767E-15 -3.05311331771918E-16 4.99600361081321E-16" />
+    <parent
+      link="left hip pitch" />
+    <child
+      link="left knee pitch" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left ankle pitch">
+    <inertial>
+      <origin
+        xyz="-0.012261073166329 -0.0127702108020288 0.00385902653421848"
+        rpy="0 0 0" />
+      <mass
+        value="0.0692005181830974" />
+      <inertia
+        ixx="2.36910155439805E-05"
+        ixy="5.78090342943977E-07"
+        ixz="1.46695929999862E-07"
+        iyy="1.60316743915191E-05"
+        iyz="1.57059601561724E-07"
+        izz="3.07447648211417E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left ankle pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left ankle pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left ankle pitch"
+    type="revolute">
+    <origin
+      xyz="0.0975286803532308 -0.0241935044800929 -0.00871148793902048"
+      rpy="1.27675647831893E-15 1.66533453693773E-16 -2.22044604925031E-16" />
+    <parent
+      link="left knee pitch" />
+    <child
+      link="left ankle pitch" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left ankle roll">
+    <inertial>
+      <origin
+        xyz="0.0232296760089229 0.0878568180406127 0.013135524694265"
+        rpy="0 0 0" />
+      <mass
+        value="0.0309681647536877" />
+      <inertia
+        ixx="3.459270350368E-05"
+        ixy="7.40027037512043E-07"
+        ixz="-2.60462631280697E-20"
+        iyy="2.79271022212574E-05"
+        iyz="-1.67289007082724E-20"
+        izz="1.02256743398885E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left ankle roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/left ankle roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left ankle roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5707963267949 2.77555756156289E-17 -5.55111512312578E-17" />
+    <parent
+      link="left ankle pitch" />
+    <child
+      link="left ankle roll" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Neck Yaw">
+    <inertial>
+      <origin
+        xyz="8.88178419700125E-16 -1.62370117351429E-15 0.00782298382889424"
+        rpy="0 0 0" />
+      <mass
+        value="0.00700186716833822" />
+      <inertia
+        ixx="2.39456488978734E-06"
+        ixy="1.12496563307212E-20"
+        ixz="0"
+        iyy="9.07121040996484E-07"
+        iyz="-2.76609196837732E-21"
+        izz="2.03656835480001E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Neck Yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Neck Yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck_yaw"
+    type="revolute">
+    <origin
+      xyz="0.0490982135970893 0.0140884820081444 0.370454782609955"
+      rpy="-7.49400541621981E-16 3.33066907387547E-16 1.24344978758018E-14" />
+    <parent
+      link="chest" />
+    <child
+      link="Neck Yaw" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Head">
+    <inertial>
+      <origin
+        xyz="0.0126164480094711 -1.83186799063151E-15 -0.000247714271309984"
+        rpy="0 0 0" />
+      <mass
+        value="0.0334002817224662" />
+      <inertia
+        ixx="4.31570771493238E-06"
+        ixy="-2.043466985251E-20"
+        ixz="-1.4845071112931E-07"
+        iyy="8.35330194280809E-06"
+        iyz="-6.35274710440725E-22"
+        izz="7.15068670371789E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Head.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Head.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0200000000000001"
+      rpy="1.57079632679491 -1.5707963267949 0" />
+    <parent
+      link="Neck Yaw" />
+    <child
+      link="Head" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Right_Shoulder_pitch">
+    <inertial>
+      <origin
+        xyz="0.00558133072353895 -5.2849391529719E-13 0.0114662844017621"
+        rpy="0 0 0" />
+      <mass
+        value="0.00751439844292765" />
+      <inertia
+        ixx="3.11469819991558E-06"
+        ixy="2.2387965770175E-09"
+        ixz="4.81334886525289E-07"
+        iyy="1.57281484696627E-06"
+        iyz="-2.9297757914783E-17"
+        izz="2.88180850470474E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Right_Shoulder_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Right_Shoulder_pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_shoulder_pitch"
+    type="revolute">
+    <origin
+      xyz="0.0507982135970879 -0.0464115179918542 0.347544782609955"
+      rpy="-0.321750554396642 1.57079630572147 -2.24553726901845" />
+    <parent
+      link="chest" />
+    <child
+      link="Right_Shoulder_pitch" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Right Shoulder Roll">
+    <inertial>
+      <origin
+        xyz="0.0399514039217449 -0.000170185942904716 0.000128816315440261"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691387454449324" />
+      <inertia
+        ixx="8.91637711544482E-06"
+        ixy="-4.6983587493018E-07"
+        ixz="-4.11255380924923E-07"
+        iyy="6.5511904981982E-05"
+        iyz="1.51570977959221E-09"
+        izz="6.54575685443201E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Right Shoulder Roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Right Shoulder Roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_shoulder_roll"
+    type="revolute">
+    <origin
+      xyz="0.0160204441678972 -0.000517238591702635 0.0244494897430001"
+      rpy="-1.5707963267949 7.7715611723761E-16 -0.00103605167868147" />
+    <parent
+      link="Right_Shoulder_pitch" />
+    <child
+      link="Right Shoulder Roll" />
+    <axis
+      xyz="-0.00103605149333225 0 0.999999463298507" />
+  </joint>
+  <link
+    name="Right Gripper">
+    <inertial>
+      <origin
+        xyz="0.0427703000156814 3.55174056531626E-05 0.00333467633197994"
+        rpy="0 0 0" />
+      <mass
+        value="0.0179301251479615" />
+      <inertia
+        ixx="3.84682862576818E-06"
+        ixy="2.77836661793961E-08"
+        ixz="6.03933928620474E-07"
+        iyy="2.18208069397704E-05"
+        iyz="-2.42795066787969E-09"
+        izz="2.14011298263219E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Right Gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Right Gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_gripper"
+    type="revolute">
+    <origin
+      xyz="0.0798815588126549 0 0"
+      rpy="1.5707963267949 0 2.77555756156289E-17" />
+    <parent
+      link="Right Shoulder Roll" />
+    <child
+      link="Right Gripper" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Left Shoulder Pitch">
+    <inertial>
+      <origin
+        xyz="0.00558133072361056 -5.39374100938517E-13 0.0114662844018069"
+        rpy="0 0 0" />
+      <mass
+        value="0.00751439844298806" />
+      <inertia
+        ixx="3.11469819994021E-06"
+        ixy="2.23879657548432E-09"
+        ixz="4.81334886531278E-07"
+        iyy="1.57281484697983E-06"
+        iyz="-2.84509896653247E-17"
+        izz="2.88180850473186E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Left Shoulder Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Left Shoulder Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_pitch"
+    type="revolute">
+    <origin
+      xyz="0.0507982135970863 0.0745884820081459 0.347544782609955"
+      rpy="0.137066174310188 1.57079630572147 1.71269338139906" />
+    <parent
+      link="chest" />
+    <child
+      link="Left Shoulder Pitch" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Left Shoulder Roll">
+    <inertial>
+      <origin
+        xyz="0.0399085532172735 0.0001701859429038 0.000211555387698154"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691387454449323" />
+      <inertia
+        ixx="8.91832420348637E-06"
+        ixy="4.69831725577745E-07"
+        ixz="-5.28410706625596E-07"
+        iyy="6.55119049819817E-05"
+        iyz="-2.48925432286584E-09"
+        izz="6.54556214562782E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Left Shoulder Roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Left Shoulder Roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_roll"
+    type="revolute">
+    <origin
+      xyz="0.0160216873839817 0.000682716647401216 0.024449489743"
+      rpy="1.57079632679489 6.63358257213531E-15 -0.00103605167868236" />
+    <parent
+      link="Left Shoulder Pitch" />
+    <child
+      link="Left Shoulder Roll" />
+    <axis
+      xyz="0.0010360514933343 0 0.999999463298507" />
+  </joint>
+  <link
+    name="Left Gripper">
+    <inertial>
+      <origin
+        xyz="0.0427703000155136 3.55174052363572E-05 0.00333467633215639"
+        rpy="0 0 0" />
+      <mass
+        value="0.017930125148561" />
+      <inertia
+        ixx="3.84682862581678E-06"
+        ixy="2.77836662000269E-08"
+        ixz="6.03933928607543E-07"
+        iyy="2.18208069395448E-05"
+        iyz="-2.42795069404199E-09"
+        izz="2.1401129826153E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Left Gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Dreko/meshes/Left Gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper"
+    type="revolute">
+    <origin
+      xyz="0.0798383554653828 0 0"
+      rpy="-1.57079632679486 -5.55111512312578E-17 2.77555756156289E-17" />
+    <parent
+      link="Left Shoulder Roll" />
+    <child
+      link="Left Gripper" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>
